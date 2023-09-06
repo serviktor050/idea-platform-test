@@ -1,35 +1,37 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import { FILTER } from '../../shared/config/constants';
+import { FILTERS } from '../../shared/config/constants';
 
 import styles from './styles.module.css';
 
 const cx = classNames.bind(styles);
 
 interface TicketsListProps {
-  selectTicketStop: number[],
-  setSelectTicketStop: (numbers: number[]) => void,
+  selectedStop: number[],
+  setSelectedStop: (numbers: number[]) => void,
 }
 
-function TicketsFilter({ selectTicketStop, setSelectTicketStop }: TicketsListProps) {
+function TicketsFilter({ selectedStop, setSelectedStop }: TicketsListProps) {
   const handleChange = (option: number) => {
-    if (selectTicketStop.includes(option)) {
-      setSelectTicketStop(selectTicketStop.filter(o => o !== option));
+    if (selectedStop.includes(option)) {
+      setSelectedStop(selectedStop.filter(o => o !== option));
     } else {
-      setSelectTicketStop([ ...selectTicketStop, option ]);
+      setSelectedStop([ ...selectedStop, option ]);
     }
   };
+
   return (
     <div className={cx('container')}>
       <div className={cx('tickets-filter')}>
-        {FILTER.map((item) => (
-          <label key={item.id}>
+        <h2>Количество пересадок</h2>
+        {FILTERS.map((filter) => (
+          <label key={filter.id}>
             <input
               type="checkbox"
-              checked={selectTicketStop.includes(item.count)}
-              onChange={() => handleChange(item.count)}
+              checked={selectedStop.includes(filter.count)}
+              onChange={() => handleChange(filter.count)}
             />
-            {item.name}
+            {filter.name}
           </label>
         ))}
       </div>

@@ -12,7 +12,8 @@
 .tickets-filter {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
+    padding: 10px 20px;
     background-color: white;
     border-radius: 15px;
 }

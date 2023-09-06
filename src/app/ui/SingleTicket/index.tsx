@@ -25,6 +25,7 @@ function SingleTicket({ ticket }: SingleTicketProps) {
     stops,
     price
   } = ticket;
+
   return (
     <div className={cx('single-ticket')}>
       <div className={cx('single-ticket__order')}>

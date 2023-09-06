@@ -1,23 +1,26 @@
 import React from 'react';
-import { TICKETS } from '../../../shared/config/constants';
 import classNames from 'classnames/bind';
-import styles from './styles.module.css';
+import { TICKETS } from '../../../shared/config/constants';
 import { SingleTicket } from '../index';
+
+import styles from './styles.module.css';
 
 const cx = classNames.bind(styles);
 
 interface TicketsListProps {
-  selectTicketStop: number[],
+  selectedStop: number[],
 }
 
-function TicketsList({ selectTicketStop }: TicketsListProps) {
-  const filteredData = TICKETS.filter(item =>
-    selectTicketStop.includes(item.stops)
-  );
+function TicketsList({ selectedStop }: TicketsListProps) {
+  const sortedTickets = TICKETS.sort((a,b) => a.price - b.price);
+
+  const filteredTickets = TICKETS.filter(ticket =>
+    selectedStop.includes(ticket.stops)
+  ).sort((a,b) => a.price - b.price);
 
   return (
     <div className={cx('tickets-list')}>
-      {filteredData.map((ticket) => {
+      {(filteredTickets.length ? filteredTickets : sortedTickets).map((ticket) => {
         const { id } = ticket;
         return (
           <SingleTicket key={id} ticket={ticket} />

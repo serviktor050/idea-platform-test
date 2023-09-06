@@ -165,7 +165,7 @@ export const TICKETS: ITicket[] = [
   }
 ];
 
-export const FILTER: IFilter[] = [
+export const FILTERS: IFilter[] = [
   {
     id: 0,
     name: 'Без пересадок',

@@ -1,4 +1,4 @@
-.tickets-filter {
+.container {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -6,6 +6,13 @@
     padding: 10px 20px;
     background-color: lightgrey;
     border-radius: 15px;
-    justify-content: center;
     align-items: center;
+}
+
+.tickets-filter {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
 }

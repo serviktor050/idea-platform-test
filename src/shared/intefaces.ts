@@ -12,3 +12,9 @@ export interface ITicket {
   'stops': number,
   'price': number
 }
+
+export interface IFilter {
+  id: number,
+  name: string
+  count: number,
+}

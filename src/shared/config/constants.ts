@@ -1,8 +1,8 @@
-import { ITicket } from '../intefaces';
+import { ITicket, IFilter } from '../intefaces';
 
 export const TICKETS: ITicket[] = [
   {
-    'id': 1,
+    'id': 0,
     'origin': 'VVO',
     'origin_name': 'Владивосток',
     'destination': 'TLV',
@@ -15,7 +15,7 @@ export const TICKETS: ITicket[] = [
     'stops': 3,
     'price': 12400
   }, {
-    'id': 2,  
+    'id': 1,
     'origin': 'VVO',
     'origin_name': 'Владивосток',
     'destination': 'TLV',
@@ -28,7 +28,7 @@ export const TICKETS: ITicket[] = [
     'stops': 1,
     'price': 13100
   }, {
-    'id': 3,  
+    'id': 2,
     'origin': 'VVO',
     'origin_name': 'Владивосток',
     'destination': 'TLV',
@@ -41,7 +41,7 @@ export const TICKETS: ITicket[] = [
     'stops': 0,
     'price': 15300
   }, {
-    'id': 4,  
+    'id': 3,
     'origin': 'VVO',
     'origin_name': 'Владивосток',
     'destination': 'TLV',
@@ -54,7 +54,7 @@ export const TICKETS: ITicket[] = [
     'stops': 2,
     'price': 11000
   }, {
-    'id': 5,  
+    'id': 4,
     'origin': 'VVO',
     'origin_name': 'Владивосток',
     'destination': 'TLV',
@@ -67,7 +67,7 @@ export const TICKETS: ITicket[] = [
     'stops': 3,
     'price': 13400
   }, {
-    'id': 6,
+    'id': 5,
     'origin': 'VVO',
     'origin_name': 'Владивосток',
     'destination': 'TLV',
@@ -80,7 +80,7 @@ export const TICKETS: ITicket[] = [
     'stops': 3,
     'price': 12450
   }, {
-    'id': 7,
+    'id': 6,
     'origin': 'VVO',
     'origin_name': 'Владивосток',
     'destination': 'TLV',
@@ -94,7 +94,7 @@ export const TICKETS: ITicket[] = [
     'price': 13600
   },
   {
-    'id': 8,
+    'id': 7,
     'origin': 'VVO',
     'origin_name': 'Владивосток',
     'destination': 'UFA',
@@ -108,7 +108,7 @@ export const TICKETS: ITicket[] = [
     'price': 33400
   },
   {
-    'id': 9,
+    'id': 8,
     'origin': 'VVO',
     'origin_name': 'Владивосток',
     'destination': 'TLV',
@@ -121,7 +121,8 @@ export const TICKETS: ITicket[] = [
     'stops': 0,
     'price': 14250
   },
-  {    'id': 10,
+  {
+    'id': 9,
     'origin': 'LRN',
     'origin_name': 'Ларнака',
     'destination': 'TLV',
@@ -135,7 +136,7 @@ export const TICKETS: ITicket[] = [
     'price': 7000
   },
   {
-    'id': 11,
+    'id': 10,
     'origin': 'VVO',
     'origin_name': 'Владивосток',
     'destination': 'TLV',
@@ -149,7 +150,7 @@ export const TICKETS: ITicket[] = [
     'price': 16700
   },
   {
-    'id': 12,
+    'id': 11,
     'origin': 'VVO',
     'origin_name': 'Владивосток',
     'destination': 'TLV',
@@ -162,4 +163,27 @@ export const TICKETS: ITicket[] = [
     'stops': 0,
     'price': 17400
   }
+];
+
+export const FILTER: IFilter[] = [
+  {
+    id: 0,
+    name: 'Без пересадок',
+    count: 0,
+  },
+  {
+    id: 1,
+    name: '1 пересадка',
+    count: 1,
+  },
+  {
+    id: 2,
+    name: '2 пересадки',
+    count: 2,
+  },
+  {
+    id: 3,
+    name: '3 пересадки',
+    count: 3,
+  },
 ];

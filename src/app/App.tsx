@@ -1,10 +1,16 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import { TicketsList } from './ui';
-import './App.css';
+import { TicketsFilter } from '../features';
+
+import styles from './styles.module.css';
+
+const cx = classNames.bind(styles);
 
 function App() {
   return (
-    <div className="App">
+    <div className={cx('App')}>
+      <TicketsFilter />
       <TicketsList />
     </div>
   );

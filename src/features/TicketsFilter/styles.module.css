@@ -1,8 +1,8 @@
-.tickets-list {
+.tickets-filter {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 70%;
+    width: 30%;
     padding: 10px 20px;
     background-color: lightgrey;
     border-radius: 15px;

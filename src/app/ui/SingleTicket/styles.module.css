@@ -1,4 +1,73 @@
 .single-ticket {
-    width: 60%;
-    background-color: #61dafb;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.single-ticket__order {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 25%;
+    border-right: 1px solid lightgrey;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-ticket__order__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    padding: 15px 15px;
+    border-radius: 15px;
+    border: none;
+    background: #FF9840;
+    margin-top: 0;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.single-ticket__order__btn:hover {
+    box-shadow: 0 0 10px #ffb473;
+}
+
+.single-ticket__order__btn:active {
+    background: #ffb473;
+}
+
+.single-ticket__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.15fr 1fr;
+    width: 75%;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-ticket__from-where__time,
+.single-ticket__to-where__time {
+    text-align: center;
+    font-size: 30px;
+}
+
+.single-ticket__from-where__city,
+.single-ticket__to-where__city {
+    text-align: center;
+    font-size: 18px;
+}
+
+.single-ticket__from-where__date,
+.single-ticket__to-where__date {
+    text-align: center;
+    font-size: 16px;
+    color: grey;
+}
+
+.single-ticket__transfer {
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
 }

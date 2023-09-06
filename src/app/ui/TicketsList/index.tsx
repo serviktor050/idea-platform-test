@@ -1,8 +1,9 @@
 import React from 'react';
-import { TICKETS } from '../../../shared/config/constants';
 import classNames from 'classnames/bind';
-import styles from './styles.module.css';
 import { SingleTicket } from '../index';
+import { TICKETS } from '../../../shared/config/constants';
+
+import styles from './styles.module.css';
 
 const cx = classNames.bind(styles);
 
